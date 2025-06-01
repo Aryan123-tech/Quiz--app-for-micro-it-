@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subject Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Quiz Game</h1>
+
+    <!-- Name Entry -->
+    <div id="name-entry">
+      <h2>Enter Your Name to Start</h2>
+      <input type="text" id="player-name" placeholder="Your Name" />
+      <button onclick="submitName()">Continue</button>
+    </div>
+
+    <!-- Subject Selection -->
+    <div id="subject-selection" class="hide">
+      <h2>Select a Subject</h2>
+      <button onclick="startQuiz('HTML')">HTML</button>
+      <button onclick="startQuiz('CSS')">CSS</button>
+      <button onclick="startQuiz('JavaScript')">JavaScript</button>
+    </div>
+
+    <!-- Quiz Box -->
+    <div id="quiz-box" class="hide">
+      <h2 id="subject-title"></h2>
+      <div id="question-box">
+        <p id="question"></p>
+        <div id="options"></div>
+      </div>
+      <button id="next-btn" disabled>Next</button>
+    </div>
+
+    <!-- Result Box -->
+    <div id="result-box" class="hide">
+      <h2>Quiz Complete!</h2>
+      <p id="score"></p>
+    </div>
+
+    <!-- Score History -->
+    <div id="history-box">
+      <h2>Score History</h2>
+      <ul id="score-history"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
